@@ -20,6 +20,7 @@ func (c *UpdateInventoryController) UpdatedInventory(ctx *gin.Context) {
 		SKU      string  `json:"sku"`
 		Quantity float64 `json:"quantity"`
 	}
+
 	if err := ctx.ShouldBindJSON(&request); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
@@ -29,6 +30,19 @@ func (c *UpdateInventoryController) UpdatedInventory(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	inStock, err := c.UpdatedInventoryService.IsInStock(request.SKU)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
 
-	ctx.JSON(http.StatusOK, gin.H{"message": "Item sold successfully"})
+	if inStock {
+		ctx.JSON(http.StatusOK, gin.H{"message": "Item is in stock"})
+		ctx.JSON(http.StatusOK, gin.H{"message": "Item sold successfully"})
+
+	} else {
+		ctx.JSON(http.StatusNotFound, gin.H{"message": "Item is not in stock"})
+		return
+	}
+
 }
