@@ -37,7 +37,7 @@ func (s *InventoryService) IsInStock(sku string) (bool, error) {
 	return item.Quantity >= 0, nil // In stock if quantity is greater than zero
 }
 
-func (s *InventoryService) UpdatedInventory(sku string, soldQuantity float64) error {
+func (s *InventoryService) UpdatedInventory(sku string, soldQuantity float32) error {
 	filter := bson.M{"sku": sku}
 	var item models.Inventory_SKU
 	err := s.collection.FindOne(context.TODO(), filter).Decode(&item)

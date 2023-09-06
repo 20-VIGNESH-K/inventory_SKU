@@ -18,7 +18,7 @@ func InitUpdateInventoryController(UpdatedInventoryService interfaces.IUpdateInv
 func (c *UpdateInventoryController) UpdatedInventory(ctx *gin.Context) {
 	var request struct {
 		SKU      string  `json:"sku"`
-		Quantity float64 `json:"quantity"`
+		Quantity float32 `json:"quantity"`
 	}
 
 	if err := ctx.ShouldBindJSON(&request); err != nil {
