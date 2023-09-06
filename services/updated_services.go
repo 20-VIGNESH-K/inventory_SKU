@@ -49,7 +49,7 @@ func (s *InventoryService) UpdatedInventory(sku string, soldQuantity float64) er
 	}
 
 	if item.Quantity < soldQuantity {
-		return fmt.Errorf("not enough quantity in stock")
+		return fmt.Errorf("not enough quantity in stock, There is only %v available", item.Quantity)
 	}
 	update := bson.M{"$inc": bson.M{"quantity": -soldQuantity}}
 
