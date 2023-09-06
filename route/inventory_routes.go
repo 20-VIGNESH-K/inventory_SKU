@@ -1,8 +1,7 @@
 package routes
 
 import (
-	"inventory_SKU/controllers"
-
+	"github.com/20-VIGNESH-K/inventory_SKU/controllers"
 	"github.com/gin-gonic/gin"
 )
 

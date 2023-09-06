@@ -3,11 +3,11 @@ package config
 import (
 	"context"
 	"fmt"
-	"inventory_SKU/constants"
 
 	"log"
 	"time"
 
+	"github.com/20-VIGNESH-K/inventory_SKU/constants"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"

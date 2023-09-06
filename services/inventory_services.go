@@ -3,9 +3,10 @@ package services
 import (
 	"context"
 	"fmt"
-	"inventory_SKU/interfaces"
+
 	"time"
 
+	"github.com/20-VIGNESH-K/inventory_SKU/interfaces"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

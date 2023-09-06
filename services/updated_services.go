@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"inventory_SKU/interfaces"
-	"inventory_SKU/models"
 
+	"github.com/20-VIGNESH-K/inventory_SKU/interfaces"
+	"github.com/20-VIGNESH-K/inventory_SKU/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )

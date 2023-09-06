@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"inventory_SKU/interfaces"
 	"net/http"
 
+	"github.com/20-VIGNESH-K/inventory_SKU/interfaces"
 	"github.com/gin-gonic/gin"
 )
 

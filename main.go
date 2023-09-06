@@ -3,14 +3,14 @@ package main
 import (
 	"context"
 	"fmt"
-	"inventory_SKU/config"
-	"inventory_SKU/constants"
-	"inventory_SKU/controllers"
-	"inventory_SKU/services"
 	"log"
 
-	routes "inventory_SKU/route"
+	routes "github.com/20-VIGNESH-K/inventory_SKU/route"
 
+	"github.com/20-VIGNESH-K/inventory_SKU/config"
+	"github.com/20-VIGNESH-K/inventory_SKU/constants"
+	"github.com/20-VIGNESH-K/inventory_SKU/controllers"
+	"github.com/20-VIGNESH-K/inventory_SKU/services"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 )

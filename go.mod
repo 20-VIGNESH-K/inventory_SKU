@@ -1,4 +1,4 @@
-module inventory_SKU
+module github.com/20-VIGNESH-K/inventory_SKU
 
 go 1.18
 
